@@ -1,6 +1,8 @@
+// filepath: /e:/Personal Project/blog_project/AnvithSphere/anvithsphere/app/login/page.tsx
 "use client";
 
 import { useState } from "react";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
   const [agreeToWhatsapp, setAgreeToWhatsapp] = useState(false);
@@ -90,16 +92,12 @@ const LoginPage = () => {
 
           {/* Social Login Options */}
           <div className="flex justify-center space-x-4">
-            <img
-              src="/path/to/facebook-logo.png"
-              alt="Login with Facebook"
-              className="h-10 cursor-pointer"
+            <FaFacebook
+              className="h-10 w-10 text-blue-600 cursor-pointer"
               onClick={() => handleSocialLogin("Facebook")}
             />
-            <img
-              src="/path/to/gmail-logo.png"
-              alt="Login with Gmail"
-              className="h-10 cursor-pointer"
+            <FaGoogle
+              className="h-10 w-10 text-red-600 cursor-pointer"
               onClick={() => handleSocialLogin("Gmail")}
             />
           </div>
@@ -109,7 +107,7 @@ const LoginPage = () => {
             <button
               type="button"
               className="text-gray-500 hover:underline"
-              onClick={() => window.location.href = "/"}
+              onClick={() => (window.location.href = "/")}
             >
               Skip
             </button>

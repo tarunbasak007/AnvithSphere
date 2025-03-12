@@ -96,6 +96,11 @@ const Navbar = () => {
                 Sign Up
               </button>
             </Link>
+            <Link href="/login">
+              <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-all duration-200 transform hover:scale-105 font-medium shadow-md hover:shadow-lg">
+                Login
+              </button>
+            </Link>
           </div>
         </div>
       </div>
