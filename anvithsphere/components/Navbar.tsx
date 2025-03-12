@@ -91,12 +91,8 @@ const Navbar = () => {
                 </svg>
               )}
             </button>
-
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-all duration-200 transform hover:scale-105 font-medium shadow-md hover:shadow-lg">
-              Subscribe
-            </button>
             <Link href="/signup">
-              <button className="bg-white dark:bg-gray-800 text-orange-500 px-6 py-2 rounded-full border-2 border-orange-500 hover:bg-orange-50 dark:hover:bg-gray-700 transition-all duration-200 transform hover:scale-105 font-medium">
+              <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-all duration-200 transform hover:scale-105 font-medium shadow-md hover:shadow-lg">
                 Sign Up
               </button>
             </Link>

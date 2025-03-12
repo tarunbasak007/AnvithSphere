@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="container mx-auto px-6 py-8 mt-16 border border-gray-300 shadow-lg rounded-lg">
       {/* Hero Section with Parallax Effect */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-90"></div>
@@ -21,7 +21,7 @@ const About = () => {
           <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
             <p className="text-gray-600 leading-relaxed">
-              I'm a passionate writer and thinker who loves to explore various topics
+              I&apos;m a passionate writer and thinker who loves to explore various topics
               and share insights with my readers. Through this blog, I aim to create
               meaningful discussions and build a community of curious minds.
             </p>
@@ -73,7 +73,7 @@ const About = () => {
 
         {/* Social Links */}
         <section className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Let's Connect</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Let&apos;s Connect</h2>
           <div className="flex justify-center gap-6">
             {['Twitter', 'LinkedIn', 'GitHub'].map((platform, index) => (
               <a

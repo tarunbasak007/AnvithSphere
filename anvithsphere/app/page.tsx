@@ -15,9 +15,9 @@ export default function HomePage() {
     setShowSubscription(false);
     alert("Thank you for subscribing!");
   };
-
+  
   return (
-    <div className="min-h-screen">
+    <div className="container min-h-screen px-6 py-8 mt-16 border border-gray-300 shadow-lg rounded-lg">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
         <div className="absolute inset-0 bg-black/50"></div>

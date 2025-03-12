@@ -3,10 +3,12 @@ import Link from "next/link";
 
 const BlogPage = () => {
   return (
-    <div className="container mx-auto px-6 py-8">
+    <div className="container mx-auto px-6 py-8 mt-16 border border-gray-300 shadow-lg rounded-lg">
       {/* Hero Section */}
       <header className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">Tarun&apos;s Blog</h1>
+        <h1 className="text-5xl font-bold text-gray-800 mb-4">
+          Tarun&apos;s Blog
+        </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Exploring Math, Coding, and Everything In Between!
         </p>
@@ -26,9 +28,15 @@ const BlogPage = () => {
                 />
               </div>
               <div className="p-8">
-                <span className="text-blue-600 font-semibold">{featuredPost.category}</span>
-                <h2 className="text-3xl font-bold text-gray-800 mt-2">{featuredPost.title}</h2>
-                <p className="text-gray-600 mt-4 text-lg">{featuredPost.excerpt}</p>
+                <span className="text-blue-600 font-semibold">
+                  {featuredPost.category}
+                </span>
+                <h2 className="text-3xl font-bold text-gray-800 mt-2">
+                  {featuredPost.title}
+                </h2>
+                <p className="text-gray-600 mt-4 text-lg">
+                  {featuredPost.excerpt}
+                </p>
                 <div className="flex items-center mt-6">
                   <div className="flex items-center">
                     <Image
@@ -54,10 +62,16 @@ const BlogPage = () => {
         <div className="md:col-span-2 space-y-8">
           {/* Latest Posts */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Latest Posts</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              Latest Posts
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {blogPosts.map((post) => (
-                <Link href={`/blog/${post.slug}`} key={post.slug} className="block">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  key={post.slug}
+                  className="block"
+                >
                   <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                     <div className="relative h-48">
                       <Image
@@ -68,11 +82,19 @@ const BlogPage = () => {
                       />
                     </div>
                     <div className="p-5">
-                      <span className="text-blue-600 text-sm font-semibold">{post.category}</span>
-                      <h3 className="text-xl font-semibold text-gray-800 mt-2">{post.title}</h3>
-                      <p className="text-gray-600 mt-2 text-sm">{post.excerpt}</p>
+                      <span className="text-blue-600 text-sm font-semibold">
+                        {post.category}
+                      </span>
+                      <h3 className="text-xl font-semibold text-gray-800 mt-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 mt-2 text-sm">
+                        {post.excerpt}
+                      </p>
                       <div className="flex items-center mt-4">
-                        <span className="text-gray-500 text-sm">{post.date}</span>
+                        <span className="text-gray-500 text-sm">
+                          {post.date}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -83,15 +105,22 @@ const BlogPage = () => {
 
           {/* Popular Topics */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Popular Topics</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              Popular Topics
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {popularTopics.map((topic) => (
-                <div key={topic.name} className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors cursor-pointer">
+                <div
+                  key={topic.name}
+                  className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors cursor-pointer"
+                >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                     {topic.icon}
                   </div>
                   <h3 className="font-semibold text-gray-800">{topic.name}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{topic.postCount} posts</p>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {topic.postCount} posts
+                  </p>
                 </div>
               ))}
             </div>
@@ -102,11 +131,16 @@ const BlogPage = () => {
         <aside className="space-y-8">
           {/* Categories */}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Categories</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              Categories
+            </h3>
             <ul className="space-y-2">
               {categories.map((category) => (
                 <li key={category}>
-                  <Link href={`/category/${category}`} className="flex items-center justify-between text-gray-700 hover:text-blue-600 transition-colors">
+                  <Link
+                    href={`/category/${category}`}
+                    className="flex items-center justify-between text-gray-700 hover:text-blue-600 transition-colors"
+                  >
                     <span>{category}</span>
                     <span className="text-sm text-gray-500">→</span>
                   </Link>
@@ -133,11 +167,16 @@ const BlogPage = () => {
 
           {/* Recent Posts */}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Recent Posts</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              Recent Posts
+            </h3>
             <ul className="space-y-4">
               {recentPosts.map((post) => (
                 <li key={post.slug}>
-                  <Link href={`/blog/${post.slug}`} className="flex items-start space-x-3 group">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="flex items-start space-x-3 group"
+                  >
                     <div className="relative w-16 h-16 flex-shrink-0">
                       <Image
                         src={post.image}
@@ -167,7 +206,8 @@ const BlogPage = () => {
 const featuredPost = {
   slug: "measure-theory-for-beginners",
   title: "Measure Theory for Beginners: A Comprehensive Guide",
-  excerpt: "Dive deep into the fundamentals of measure theory with practical examples and intuitive explanations. Perfect for those starting their journey in advanced mathematics.",
+  excerpt:
+    "Dive deep into the fundamentals of measure theory with practical examples and intuitive explanations. Perfect for those starting their journey in advanced mathematics.",
   image: "/images/measure-theory.jpg",
   category: "Mathematics",
   date: "March 15, 2024",
@@ -208,7 +248,13 @@ const blogPosts = [
   },
 ];
 
-const categories = ["Mathematics", "Coding", "Web Development", "Finance", "Blender"];
+const categories = [
+  "Mathematics",
+  "Coding",
+  "Web Development",
+  "Finance",
+  "Blender",
+];
 
 const popularTopics = [
   { name: "Mathematics", postCount: 12, icon: "📐" },
