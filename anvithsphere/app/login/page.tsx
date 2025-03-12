@@ -5,14 +5,20 @@ import { useState } from "react";
 const LoginPage = () => {
   const [agreeToWhatsapp, setAgreeToWhatsapp] = useState(false);
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Email:", email);
+    console.log("Password:", password);
     if (agreeToWhatsapp) {
       console.log("WhatsApp Number:", whatsapp);
     }
+  };
+
+  const handleSocialLogin = (platform: string) => {
+    console.log(`Logging in with ${platform}`);
   };
 
   return (
@@ -33,6 +39,21 @@ const LoginPage = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          {/* Password Field */}
+          <div>
+            <label className="block text-gray-700 text-sm font-medium mb-1">
+              Password
+            </label>
+            <input
+              type="password"
+              className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-200"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
@@ -67,12 +88,28 @@ const LoginPage = () => {
             </div>
           )}
 
+          {/* Social Login Options */}
+          <div className="flex justify-center space-x-4">
+            <img
+              src="/path/to/facebook-logo.png"
+              alt="Login with Facebook"
+              className="h-10 cursor-pointer"
+              onClick={() => handleSocialLogin("Facebook")}
+            />
+            <img
+              src="/path/to/gmail-logo.png"
+              alt="Login with Gmail"
+              className="h-10 cursor-pointer"
+              onClick={() => handleSocialLogin("Gmail")}
+            />
+          </div>
+
           {/* Submit & Skip Buttons */}
           <div className="flex justify-between">
             <button
               type="button"
               className="text-gray-500 hover:underline"
-              onClick={() => console.log("User skipped")}
+              onClick={() => window.location.href = "/"}
             >
               Skip
             </button>
